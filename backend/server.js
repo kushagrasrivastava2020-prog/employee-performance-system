@@ -22,6 +22,10 @@ app.use("/api/employees", employeeRoutes);
 
 app.use("/api/ai", aiRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully");
+});
+
 app.listen(process.env.PORT, () => {
   console.log("Server running");
 });
